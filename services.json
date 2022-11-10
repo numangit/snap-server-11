@@ -1,0 +1,13 @@
+[
+    {
+        "_id": {
+            "$oid": "636ce395ef7ba84953d44354"
+        },
+        "name": "Product Photography",
+        "price": "80",
+        "camera": "Nikon Z7 II",
+        "lens": "Canon 85mm f1",
+        "description": "Another branch of commercial photography is product photography, where you are typically shooting in a studio with careful lighting to accentuate the product in question (though sometimes outdoors or on location). In the same way as commercial portraiture, a product photographer’s goal is to match the vision of the company in question. An outdoor brand will have different needs from a high-end lifestyle company, even if both sell the same underlying type of product, such as clothing or backpacks.",
+        "picture": "https://photographylife.com/wp-content/uploads/2021/04/Nikon-Z7-II-1536x1083.jpg"
+    }
+]
