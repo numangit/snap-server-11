@@ -44,7 +44,7 @@ async function run() {
             res.send(result);
         });
 
-        //reviews api
+        // get review with email
         app.get('/myReviews', async (req, res) => {
             let query = {};
             if (req.query.email) {
@@ -53,10 +53,23 @@ async function run() {
                 }
             }
             const cursor = reviewCollection.find(query);
-            const orders = await cursor.toArray();
-            res.send(orders);
+            const reviews = await cursor.toArray();
+            res.send(reviews);
         });
-
+        // get review with service id
+        app.get('/serviceReviews', async (req, res) => {
+            let query = {};
+            if (req.query.service) {
+                query = {
+                    service: req.query.service
+                }
+            }
+            console.log(query);
+            const cursor = reviewCollection.find(query);
+            const serviceReviews = await cursor.toArray();
+            res.send(serviceReviews);
+        });
+        // reviews based on review id
         app.get('/reviews/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
