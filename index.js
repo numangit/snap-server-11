@@ -44,7 +44,7 @@ async function run() {
 
         app.get('/HomeServices', async (req, res) => {
             const query = {}
-            const cursor = serviceCollection.find(query);
+            const cursor = serviceCollection.find(query).sort({ date: -1 });
             const services = await cursor.limit(3).toArray();
             res.send(services);
         });
